@@ -15,7 +15,6 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hit");
         addScore(1);
     }
 
@@ -26,7 +25,7 @@ public class EnemyBullet : MonoBehaviour
            scoreText.text = playerScore.ToString();
         }
            passed = true;
-           Invoke("resetPassed", 5);
+           Invoke("resetPassed", 2);
     }
 
     void resetPassed(){
